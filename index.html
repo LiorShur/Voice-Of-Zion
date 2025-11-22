@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voices of Zion – Facts, History & Hope</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f4f1e9;
+      --ink: #222222;
+      --accent: #1f4b99;
+      --accent-soft: #e0e8f8;
+      --border: #c5c0b4;
+      --muted: #666666;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(#d8d2c2, #f4f1e9);
+      color: var(--ink);
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      max-width: 1100px;
+      width: 100%;
+      background: var(--bg);
+      margin: 16px;
+      padding: 16px 18px 28px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+      border: 1px solid #b8b2a2;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 3px double var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .masthead-kicker {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .masthead-title {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: clamp(26px, 5vw, 34px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 4px 0;
+    }
+
+    .masthead-sub {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .banner-strip {
+      background: var(--accent-soft);
+      border-radius: 4px;
+      padding: 8px 10px;
+      margin-top: 10px;
+      font-size: 13px;
+      border: 1px solid #d1d6e6;
+    }
+
+    .banner-strip strong {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 11px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1.2fr 0.9fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .column {
+      border-right: 1px solid var(--border);
+      padding-right: 12px;
+    }
+
+    .column:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    .section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 6px;
+    }
+
+    .hero-story {
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .hero-story h1 {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 21px;
+      margin: 4px 0 4px;
+    }
+
+    .hero-deck {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .story {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .story:last-child {
+      border-bottom: none;
+    }
+
+    .story h2 {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 15px;
+      margin: 0 0 4px;
+    }
+
+    .story h3 {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 14px;
+      margin: 0 0 4px;
+    }
+
+    .story-summary {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .story-meta {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .read-more {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .fact-card {
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 8px 9px;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+
+    .fact-card-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 3px;
+    }
+
+    .fact-card p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 3px 7px;
+      margin-top: 5px;
+      color: var(--muted);
+    }
+
+    /* FAQ styles */
+    .faq {
+      margin-top: 20px;
+      padding-top: 12px;
+      border-top: 2px double var(--border);
+    }
+
+    .faq-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+    }
+
+    .faq-title {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 18px;
+      margin: 4px 0 6px;
+    }
+
+    .faq-intro {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+      max-width: 700px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+    }
+
+    @media (max-width: 800px) {
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--border);
+      padding-top: 6px;
+    }
+
+    .faq-question {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .faq-answer {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .footer-strip {
+      margin-top: 18px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-strip strong {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 10px;
+    }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 12px;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 700px) {
+      .source-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .source-list a {
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="masthead-kicker">Peaceful Perspectives · Quick Facts · Checkable Sources</div>
+      <div class="masthead-title">Voices of Zion</div>
+      <div class="masthead-sub">
+        The story of the Jewish people, their land, and their contribution to a better world.
+      </div>
+      <div class="banner-strip">
+        <strong>At a glance:</strong>
+        This page shares historically grounded facts and links so you can explore the
+        Jewish connection to the Land of Israel and the global impact of Zionism and the Jewish people.
+        Please read, think, and check the sources yourself.
+      </div>
+    </header>
+
+    <section class="layout">
+      <!-- COLUMN 1: ROOTED IN THIS LAND -->
+      <div class="column">
+        <div class="section-label">Rooted in this land</div>
+        <article class="hero-story">
+          <div class="story-meta">History · Land · People</div>
+          <h1>From Ancient Israel to Modern Israel</h1>
+          <p class="hero-deck">
+            The Jewish people emerged in this land more than 2,000 years ago and maintained a
+            continuous presence, prayer, and longing for Zion through exile, return, and renewal.
+          </p>
+        </article>
+
+        <article class="story">
+          <h2>Ancient Israelites in the Land of Israel</h2>
+          <p class="story-summary">
+            Historians identify the ancient Israelites as originating in the area of today’s Israel and
+            surrounding regions well before 1000&nbsp;BCE, forming kingdoms of Israel and Judah and
+            centering their national and spiritual life in Jerusalem and Zion.
+          </p>
+          <a class="read-more"
+             href="https://jewishstudies.washington.edu/who-are-jews-jewish-history-origins-antisemitism/"
+             target="_blank" rel="noopener noreferrer">
+            Read historical overview →
+          </a>
+        </article>
+
+        <article class="story">
+          <h2>A Continuous Jewish Presence</h2>
+          <p class="story-summary">
+            Even after conquests, exiles, and foreign rule, Jewish communities remained in cities like
+            Jerusalem, Safed, Hebron, and Tiberias. Modern research on 19th-century censuses shows a
+            significant Jewish population in the Land of Israel before the modern Zionist movement.
+          </p>
+          <a class="read-more"
+             href="https://www.mdpi.com/2313-5778/9/3/72"
+             target="_blank" rel="noopener noreferrer">
+            Explore 19th-century population data →
+          </a>
+        </article>
+
+        <article class="story">
+          <h2>Zionism: National Home in the Historical Homeland</h2>
+          <p class="story-summary">
+            Modern Zionism arose in the late 19th century as a movement for Jewish self-determination
+            and return to the ancestral homeland, especially after centuries of persecution and, later,
+            the trauma of the Holocaust. It combined an ancient spiritual attachment with a modern
+            struggle for safety, dignity, and democracy.
+          </p>
+          <a class="read-more"
+             href="https://en.wikipedia.org/wiki/Zionism"
+             target="_blank" rel="noopener noreferrer">
+            Learn more about Zionism →
+          </a>
+        </article>
+      </div>
+
+      <!-- COLUMN 2: LEGAL & HISTORICAL LEGITIMACY -->
+      <div class="column">
+        <div class="section-label">Historical & legal milestones</div>
+
+        <article class="story">
+          <h2>League of Nations Mandate for Palestine</h2>
+          <p class="story-summary">
+            In 1922, the League of Nations confirmed the British Mandate over Palestine with a clear
+            responsibility: to establish a “Jewish national home” while safeguarding the civil and
+            religious rights of all inhabitants, regardless of race or religion.
+          </p>
+          <a class="read-more"
+             href="https://avalon.law.yale.edu/20th_century/palmanda.asp"
+             target="_blank" rel="noopener noreferrer">
+            Read the Mandate text →
+          </a>
+        </article>
+
+        <article class="story">
+          <h2>UN Partition Plan: Two States for Two Peoples</h2>
+          <p class="story-summary">
+            In 1947, the UN General Assembly recommended partitioning the land into independent
+            Jewish and Arab states, with Jerusalem under an international regime. The Jewish
+            leadership accepted the plan; Arab leaders rejected it, leading to war after Israel’s
+            declaration of independence in 1948.
+          </p>
+          <a class="read-more"
+             href="https://avalon.law.yale.edu/20th_century/res181.asp"
+             target="_blank" rel="noopener noreferrer">
+            Read UN Resolution 181 →
+          </a>
+        </article>
+
+        <article class="story">
+          <h2>Israel’s Declaration of Independence</h2>
+          <p class="story-summary">
+            Israel’s founding document, proclaimed in 1948, affirms the Jewish people’s historic
+            connection to the land and commits the state to equality of social and political rights
+            for all its inhabitants, irrespective of religion, race, or sex, and to the pursuit of
+            peace with its neighbors.
+          </p>
+          <a class="read-more"
+             href="https://main.knesset.gov.il/en/about/pages/declaration.aspx"
+             target="_blank" rel="noopener noreferrer">
+            Read the Declaration →
+          </a>
+        </article>
+
+        <article class="story">
+          <h2>People, Not Just Politics</h2>
+          <p class="story-summary">
+            For Jews worldwide, “Zion” is not only a political concept. It appears in daily prayers,
+            songs, poetry, and ritual – expressing a deep spiritual and emotional bond to Jerusalem
+            and the Land of Israel that has lasted for millennia.
+          </p>
+          <a class="read-more"
+             href="https://en.wikipedia.org/wiki/History_of_the_Jews_and_Judaism_in_the_Land_of_Israel"
+             target="_blank" rel="noopener noreferrer">
+            Explore the long timeline →
+          </a>
+        </article>
+      </div>
+
+      <!-- COLUMN 3: CONTRIBUTIONS & VALUES -->
+      <div class="column">
+        <div class="section-label">Contribution & values</div>
+
+        <div class="fact-card">
+          <div class="fact-card-title">Jewish Nobel Laureates</div>
+          <p>
+            Jews are about 0.2% of the world’s population, yet over 20% of individual Nobel Prize
+            laureates are Jewish or of Jewish descent – contributing to physics, medicine, chemistry,
+            economics, literature, and peace.
+            <br />
+            <a href="https://en.wikipedia.org/wiki/List_of_Jewish_Nobel_laureates"
+               target="_blank" rel="noopener noreferrer">
+              See the full list →
+            </a>
+          </p>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-card-title">Innovation & Start-up Nation</div>
+          <p>
+            Israel is known as the “Start-up Nation” for its high concentration of tech start-ups and
+            R&amp;D. It has led advances in cybersecurity, medical devices, water technology, and more,
+            with support from national innovation programs.
+            <br />
+            <a href="https://innovationisrael.org.il/en/wp-content/uploads/sites/3/2023/07/Israel-Innovation-Authority-2018-19-Innovation-Report.pdf"
+               target="_blank" rel="noopener noreferrer">
+              Read Innovation Authority report →
+            </a>
+          </p>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-card-title">Feeding a Hungry Planet</div>
+          <p>
+            Israeli agricultural innovations – from drip irrigation to drought-resistant crops and
+            cutting-edge ag-tech – help farmers worldwide grow more food with less water and fewer
+            pesticides, supporting sustainable solutions to climate and food challenges.
+            <br />
+            <a href="https://www.timesofisrael.com/spotlight/israeli-agtech-driving-innovation-to-feed-the-world-sustainably/"
+               target="_blank" rel="noopener noreferrer">
+              Learn about Israeli ag-tech →
+            </a>
+          </p>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-card-title">Medicine, Relief & Humanitarian Aid</div>
+          <p>
+            Israeli doctors and rescue teams regularly deploy to disaster zones around the world,
+            setting up field hospitals and sharing medical know-how, regardless of nationality or
+            politics, guided by the principle that every human life is precious.
+            <br />
+            <a href="https://en.wikipedia.org/wiki/Israeli_medical_and_rescue_services_abroad"
+               target="_blank" rel="noopener noreferrer">
+              See examples of global aid →
+            </a>
+          </p>
+        </div>
+
+        <article class="story">
+          <h3>Zionism’s Core Values</h3>
+          <p class="story-summary">
+            At its heart, Zionism is the movement for the Jewish people’s right to self-determination
+            and safety in their ancestral homeland. It does not require denying the rights of others.
+            Many Zionists see a just future as one where Israelis and Palestinians live in peace,
+            security, and dignity.
+          </p>
+          <span class="tag">Self-determination · Human dignity</span>
+        </article>
+
+        <article class="story">
+          <h3>Against Antisemitism & Dehumanization</h3>
+          <p class="story-summary">
+            Criticism of any government’s policies is legitimate. But when rhetoric denies the
+            Jewish people’s right to self-determination, erases their history in this land, or
+            targets Jews anywhere simply for being Jewish, it crosses into antisemitism and harms
+            hopes for peace.
+          </p>
+          <span class="tag">Respect · Responsibility</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq">
+      <div class="faq-kicker">Context in a noisy moment</div>
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+      <p class="faq-intro">
+        Demonstrations can be loud and emotional. This FAQ is meant to give short, calm answers and
+        point you back to the basic ideas on this page: history, rights, and human dignity for everyone.
+      </p>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question">Does supporting Zionism mean I am against Palestinians?</div>
+          <div class="faq-answer">
+            No. Zionism is the movement for the Jewish people’s right to self-determination and safety
+            in their ancestral homeland. Many people support both a secure Jewish state and real
+            self-determination and dignity for Palestinians. Wanting safety and freedom for one people
+            should not mean denying it to another.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Did Jews suddenly “arrive” here in 1948?</div>
+          <div class="faq-answer">
+            The Jewish people trace their origins to this land thousands of years ago. There were ancient
+            kingdoms of Israel and Judah here, and Jewish communities have lived in places like Jerusalem,
+            Safed, Hebron, and Tiberias across the centuries. Modern immigration and Israel’s independence
+            added new waves of return, but they did not create the connection – they built on it.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I care about Palestinian suffering and still support Israel’s right to exist?</div>
+          <div class="faq-answer">
+            Yes. Caring about Palestinian lives, rights, and freedom is compatible with recognizing
+            the Jewish people’s right to a safe national home in their historic homeland. Many Israelis
+            and Jews around the world believe that the only moral and realistic future is one where
+            both peoples live in security, dignity, and mutual recognition.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is it antisemitic to criticize the Israeli government?</div>
+          <div class="faq-answer">
+            Criticizing any government’s policies – including Israel’s – is legitimate. It becomes
+            antisemitic when it denies the Jewish people’s right to self-determination, uses classic
+            antisemitic stereotypes, blames all Jews for the actions of a state, or calls for the
+            elimination of Israel as a Jewish homeland. The line is between policy critique and
+            dehumanizing a people.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do Arabs and other minorities have rights in Israel?</div>
+          <div class="faq-answer">
+            Israel’s Declaration of Independence promises full social and political rights to all
+            inhabitants, irrespective of religion, race, or sex. Arab citizens of Israel vote, have
+            political parties and representatives in parliament, serve as judges, doctors, academics,
+            and more. There are real debates and challenges about equality in practice – but the legal
+            framework recognizes minority rights and political participation.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Where can I read more in a calm, factual way?</div>
+          <div class="faq-answer">
+            Scroll down to the source list below for starting points: academic overviews of Jewish
+            history in the Land of Israel, the League of Nations Mandate, the UN Partition Plan,
+            Israel’s Declaration of Independence, and data on Jewish and Israeli contributions to
+            science, innovation, agriculture, and humanitarian aid. Then, explore a range of voices
+            and make up your own mind.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-strip">
+      <div>
+        <strong>Check the sources yourself</strong>
+        <div class="source-list">
+          <a href="https://jewishstudies.washington.edu/who-are-jews-jewish-history-origins-antisemitism/"
+             target="_blank" rel="noopener noreferrer">
+            · Jewish history &amp; origins (University of Washington Jewish Studies)
+          </a>
+          <a href="https://avalon.law.yale.edu/20th_century/palmanda.asp"
+             target="_blank" rel="noopener noreferrer">
+            · League of Nations Mandate for Palestine (Yale Avalon Project)
+          </a>
+          <a href="https://avalon.law.yale.edu/20th_century/res181.asp"
+             target="_blank" rel="noopener noreferrer">
+            · UN General Assembly Resolution 181 – Partition Plan
+          </a>
+          <a href="https://en.wikipedia.org/wiki/History_of_the_Jews_and_Judaism_in_the_Land_of_Israel"
+             target="_blank" rel="noopener noreferrer">
+            · History of Jews in the Land of Israel
+          </a>
+          <a href="https://en.wikipedia.org/wiki/List_of_Jewish_Nobel_laureates"
+             target="_blank" rel="noopener noreferrer">
+            · List of Jewish Nobel laureates
+          </a>
+          <a href="https://innovationisrael.org.il/en/wp-content/uploads/sites/3/2023/07/Israel-Innovation-Authority-2018-19-Innovation-Report.pdf"
+             target="_blank" rel="noopener noreferrer">
+            · Israel Innovation Authority – Innovation in Israel
+          </a>
+          <a href="https://www.timesofisrael.com/spotlight/israeli-agtech-driving-innovation-to-feed-the-world-sustainably/"
+             target="_blank" rel="noopener noreferrer">
+            · Israeli ag-tech &amp; sustainable agriculture
+          </a>
+          <a href="https://www.mdpi.com/2313-5778/9/3/72"
+             target="_blank" rel="noopener noreferrer">
+            · 19th-century Jewish presence in the Land of Israel (academic article)
+          </a>
+        </div>
+      </div>
+      <div class="note">
+        This page is designed to offer calm, source-based information in a noisy environment.
+        Please take a moment to read, reflect, and verify. Peace and human dignity for all
+        – Israelis and Palestinians alike – should be our shared goal.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
