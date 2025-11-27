@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Israel & The Jewish Story | Facts, History & Contributions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Hamburger Menu Styles */
+        .hamburger {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            width: 48px;
+            height: 48px;
+            background: var(--navy);
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 4px 15px rgba(26, 46, 76, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .hamburger:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(26, 46, 76, 0.4);
+        }
+
+        .hamburger span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 300px;
+            max-width: 85vw;
+            height: 100vh;
+            background: var(--navy);
+            z-index: 999;
+            padding: 5rem 1.5rem 2rem;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+        }
+
+        .nav-menu ul {
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 0.85rem 1rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--warm-white);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-left-color: var(--gold);
+            padding-left: 1.25rem;
+        }
+
+        .nav-menu .nav-category {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            opacity: 0.7;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .nav-menu .nav-category:first-child {
+            margin-top: 0;
+        }
+
+        /* Overlay */
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        :root {
+            --cream: #F7F4ED;
+            --warm-white: #FDFCF9;
+            --gold: #C9A227;
+            --gold-light: #E8D48A;
+            --navy: #1A2E4C;
+            --blue-accent: #2E5C9A;
+            --text-dark: #1C1C1C;
+            --text-medium: #4A4A4A;
+            --text-light: #6B6B6B;
+            --border: #D4D0C4;
+            --shadow: rgba(26, 46, 76, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Masthead */
+        .masthead {
+            background: var(--navy);
+            color: var(--warm-white);
+            text-align: center;
+            padding: 1rem;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .masthead-date {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .masthead-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 900;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.25rem;
+        }
+
+        .masthead-subtitle {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 400;
+            opacity: 0.9;
+            letter-spacing: 0.05em;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--warm-white) 0%, var(--cream) 100%);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .hero-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.75rem, 6vw, 3rem);
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            max-width: 700px;
+            margin: 0 auto 1rem;
+        }
+
+        .hero-deck {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 1.5rem 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-header::before,
+        .section-header::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .section-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            white-space: nowrap;
+        }
+
+        /* Articles Container */
+        .articles {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem 2rem;
+        }
+
+        /* Article Card */
+        .article {
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .article:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow);
+        }
+
+        .article-inner {
+            padding: 1.5rem;
+        }
+
+        .article-category {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--blue-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .article-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-summary {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            margin-bottom: 1rem;
+            line-height: 1.65;
+        }
+
+        .article-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+
+        .article-link:hover {
+            color: var(--navy);
+        }
+
+        .article-link svg {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.2s;
+        }
+
+        .article-link:hover svg {
+            transform: translateX(3px);
+        }
+
+        /* Featured Article */
+        .article.featured {
+            border-left: 4px solid var(--gold);
+        }
+
+        .article.featured .article-headline {
+            font-size: 1.5rem;
+        }
+
+        /* Quote Block */
+        .quote-block {
+            background: var(--navy);
+            color: var(--warm-white);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-style: italic;
+            line-height: 1.5;
+            max-width: 700px;
+            margin: 0 auto 1rem;
+        }
+
+        .quote-attribution {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            padding: 2rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1.25rem 1rem;
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        /* Resources Footer */
+        .resources {
+            background: var(--warm-white);
+            border-top: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+        }
+
+        .resources-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.75rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .resource-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--navy);
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .resource-link:hover {
+            background: var(--navy);
+            color: var(--warm-white);
+            border-color: var(--navy);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--warm-white);
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        footer p {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .peace-symbol {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .article {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .article:nth-child(1) { animation-delay: 0.1s; }
+        .article:nth-child(2) { animation-delay: 0.15s; }
+        .article:nth-child(3) { animation-delay: 0.2s; }
+        .article:nth-child(4) { animation-delay: 0.25s; }
+        .article:nth-child(5) { animation-delay: 0.3s; }
+        .article:nth-child(6) { animation-delay: 0.35s; }
+
+        /* Star of David decorative element */
+        .star-divider {
+            text-align: center;
+            padding: 1rem;
+            color: var(--gold);
+            font-size: 1.25rem;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem 2rem;
+        }
+
+        .comparison-intro {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .comparison-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-deck {
+            font-size: 1rem;
+            color: var(--text-medium);
+            font-style: italic;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .comparison-card {
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            padding: 1.25rem;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .comparison-card.dark {
+            background: var(--navy);
+            color: var(--warm-white);
+            border-color: var(--navy);
+        }
+
+        .comparison-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .comparison-stat-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .comparison-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .comparison-item.highlight .comparison-number {
+            color: var(--gold);
+        }
+
+        .comparison-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .comparison-desc {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-medium);
+        }
+
+        .comparison-bar {
+            height: 6px;
+            border-radius: 3px;
+            margin-top: 0.25rem;
+        }
+
+        .comparison-note {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed var(--border);
+        }
+
+        .comparison-card.dark .comparison-note {
+            color: rgba(255,255,255,0.7);
+            border-top-color: rgba(255,255,255,0.2);
+        }
+
+        .geo-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .geo-item {
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--cream);
+            border-radius: 3px;
+        }
+
+        .geo-item.highlight {
+            background: var(--navy);
+            color: var(--warm-white);
+        }
+
+        .geo-number {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .geo-item.highlight .geo-number {
+            color: var(--gold);
+        }
+
+        .geo-desc {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            margin-top: 0.25rem;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .achievement-item {
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--cream);
+            border-radius: 3px;
+        }
+
+        .achievement-item.gold {
+            background: linear-gradient(135deg, var(--gold) 0%, #D4AF37 100%);
+            color: var(--navy);
+        }
+
+        .achievement-stat {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .achievement-label {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
+        }
+
+        .hatred-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hatred-item {
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hatred-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .hatred-number {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .hatred-desc {
+            display: block;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        /* Strength Section */
+        .strength-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem 2rem;
+        }
+
+        .strength-intro {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .strength-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .strength-deck {
+            font-size: 1rem;
+            color: var(--text-medium);
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .strength-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .strength-card {
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            padding: 1.25rem;
+            text-align: center;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .strength-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .strength-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .strength-card p {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+
+        .strength-quote {
+            background: var(--navy);
+            color: var(--warm-white);
+            padding: 1.5rem;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        .strength-quote blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+        }
+
+        .strength-quote cite {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem 2rem;
+        }
+
+        .faq-intro {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-deck {
+            font-size: 1rem;
+            color: var(--text-medium);
+            font-style: italic;
+        }
+
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--gold);
+            border-radius: 2px;
+            padding: 1.25rem;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .faq-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.65;
+        }
+
+        /* Animations for new sections */
+        .comparison-card, .strength-card, .faq-item {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .comparison-card:nth-child(1) { animation-delay: 0.1s; }
+        .comparison-card:nth-child(2) { animation-delay: 0.2s; }
+        .comparison-card:nth-child(3) { animation-delay: 0.3s; }
+        .comparison-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .strength-card:nth-child(1) { animation-delay: 0.1s; }
+        .strength-card:nth-child(2) { animation-delay: 0.15s; }
+        .strength-card:nth-child(3) { animation-delay: 0.2s; }
+        .strength-card:nth-child(4) { animation-delay: 0.25s; }
+
+        .faq-item:nth-child(1) { animation-delay: 0.1s; }
+        .faq-item:nth-child(2) { animation-delay: 0.15s; }
+        .faq-item:nth-child(3) { animation-delay: 0.2s; }
+        .faq-item:nth-child(4) { animation-delay: 0.25s; }
+        .faq-item:nth-child(5) { animation-delay: 0.3s; }
+        .faq-item:nth-child(6) { animation-delay: 0.35s; }
+        .faq-item:nth-child(7) { animation-delay: 0.4s; }
+        .faq-item:nth-child(8) { animation-delay: 0.45s; }
+        .faq-item:nth-child(9) { animation-delay: 0.5s; }
+        .faq-item:nth-child(10) { animation-delay: 0.55s; }
+        .faq-item:nth-child(11) { animation-delay: 0.6s; }
+
+        /* Hamas Section Styles */
+        .hamas-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem 2rem;
+        }
+
+        .hamas-intro {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .hamas-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .hamas-deck {
+            font-size: 1rem;
+            color: var(--text-medium);
+            font-style: italic;
+        }
+
+        .hamas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hamas-card {
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .hamas-card.dark {
+            background: var(--navy);
+            color: var(--warm-white);
+            border-color: var(--navy);
+        }
+
+        .hamas-card-header {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .hamas-icon {
+            font-size: 1.5rem;
+        }
+
+        .hamas-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .hamas-card-content {
+            padding: 1.25rem;
+        }
+
+        .hamas-card-content p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .hamas-card-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .hamas-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem 0;
+        }
+
+        .hamas-list li {
+            font-size: 0.85rem;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hamas-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hamas-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .hamas-quote {
+            font-style: italic;
+            padding: 1rem;
+            background: rgba(0,0,0,0.2);
+            border-left: 3px solid var(--gold);
+            border-radius: 2px;
+            font-size: 0.9rem !important;
+        }
+
+        .quote-attr {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            opacity: 0.8;
+            font-style: normal;
+        }
+
+        /* Tunnel Section */
+        .tunnel-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: var(--warm-white);
+            padding: 2rem;
+            border-radius: 3px;
+            margin-bottom: 1.5rem;
+        }
+
+        .tunnel-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .tunnel-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tunnel-stat {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 3px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .tunnel-number {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.25rem;
+        }
+
+        .tunnel-label {
+            display: block;
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+
+        .tunnel-note {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        /* Prosperity Section */
+        .prosperity-section {
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .prosperity-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .prosperity-intro {
+            text-align: center;
+            font-size: 1rem;
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+        }
+
+        .prosperity-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .prosperity-card {
+            padding: 1.25rem;
+            border-radius: 3px;
+        }
+
+        .prosperity-card.could-have {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 1px solid #a5d6a7;
+        }
+
+        .prosperity-card.actually-built {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border: 1px solid #ef9a9a;
+        }
+
+        .prosperity-card h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--navy);
+        }
+
+        .prosperity-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem 0;
+        }
+
+        .prosperity-card li {
+            font-size: 0.85rem;
+            padding: 0.4rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .prosperity-card.could-have li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2e7d32;
+        }
+
+        .prosperity-card.actually-built li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #c62828;
+        }
+
+        .prosperity-note {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: var(--text-medium);
+            margin: 0;
+            padding-top: 0.75rem;
+            border-top: 1px dashed rgba(0,0,0,0.2);
+        }
+
+        /* Question Box */
+        .question-box {
+            background: var(--navy);
+            color: var(--warm-white);
+            padding: 1.5rem;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        .question-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .question-text strong {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* October 7th Section Styles */
+        .october7-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem 2rem;
+        }
+
+        .october7-intro {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .october7-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #8B0000;
+            margin-bottom: 0.5rem;
+        }
+
+        .october7-deck {
+            font-size: 1rem;
+            color: var(--text-medium);
+            font-style: italic;
+        }
+
+        .october7-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .october7-stat {
+            background: #1a1a2e;
+            color: var(--warm-white);
+            padding: 1.25rem 1rem;
+            border-radius: 3px;
+            text-align: center;
+            border-left: 3px solid #8B0000;
+        }
+
+        .october7-number {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FF6B6B;
+            margin-bottom: 0.25rem;
+        }
+
+        .october7-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.9;
+        }
+
+        .atrocities-section {
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .atrocities-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .atrocities-intro {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            margin-bottom: 1.25rem;
+            font-style: italic;
+        }
+
+        .atrocities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .atrocity-card {
+            padding: 1rem;
+            background: var(--cream);
+            border-radius: 3px;
+            border-left: 3px solid #8B0000;
+        }
+
+        .atrocity-icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .atrocity-card h5 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .atrocity-card p {
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .response-section {
+            background: var(--navy);
+            color: var(--warm-white);
+            border-radius: 3px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .response-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .response-intro {
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .comparison-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 1.25rem;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.75rem;
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-row.header {
+            background: rgba(0,0,0,0.2);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.65rem;
+        }
+
+        .comparison-row.highlight {
+            background: rgba(201, 162, 39, 0.2);
+            border-left: 3px solid var(--gold);
+        }
+
+        .comparison-cell {
+            padding: 0.25rem;
+        }
+
+        @media (max-width: 600px) {
+            .comparison-row {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+            }
+            .comparison-row.header {
+                display: none;
+            }
+            .comparison-cell::before {
+                font-weight: 600;
+                display: block;
+                font-size: 0.6rem;
+                opacity: 0.7;
+                text-transform: uppercase;
+            }
+        }
+
+        .response-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .response-fact {
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 3px;
+        }
+
+        .fact-highlight {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .response-fact p {
+            font-size: 0.8rem;
+            line-height: 1.5;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .october7-quote {
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 1.5rem;
+        }
+
+        .october7-quote blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--navy);
+            margin: 0 0 0.75rem 0;
+            line-height: 1.5;
+        }
+
+        .october7-quote cite {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .october7-links {
+            text-align: center;
+        }
+
+        .links-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .links-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .links-row a {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            background: var(--navy);
+            color: var(--warm-white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .links-row a:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Navigation Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <div class="nav-menu-header">Quick Navigation</div>
+        <ul>
+            <li class="nav-category">Overview</li>
+            <li><a href="#hero" class="nav-link">Welcome</a></li>
+            <li><a href="#stats" class="nav-link">Key Facts & Figures</a></li>
+            
+            <li class="nav-category">History</li>
+            <li><a href="#history" class="nav-link">Historical Connection</a></li>
+            <li><a href="#ancient-history" class="nav-link">3,000 Years of Heritage</a></li>
+            <li><a href="#archaeology" class="nav-link">Archaeological Evidence</a></li>
+            <li><a href="#zionism" class="nav-link">Understanding Zionism</a></li>
+            
+            <li class="nav-category">Contributions</li>
+            <li><a href="#innovation" class="nav-link">Innovation & Impact</a></li>
+            <li><a href="#startup-nation" class="nav-link">Startup Nation</a></li>
+            <li><a href="#medicine" class="nav-link">Medical Breakthroughs</a></li>
+            <li><a href="#environment" class="nav-link">Water Technology</a></li>
+            
+            <li class="nav-category">Society</li>
+            <li><a href="#coexistence" class="nav-link">Coexistence & Society</a></li>
+            <li><a href="#democracy" class="nav-link">Diverse Democracy</a></li>
+            <li><a href="#peace" class="nav-link">Abraham Accords</a></li>
+            <li><a href="#humanitarian" class="nav-link">Humanitarian Aid</a></li>
+
+            <li class="nav-category">The Big Picture</li>
+            <li><a href="#perspective" class="nav-link">By the Numbers</a></li>
+            <li><a href="#strength" class="nav-link">Peace Through Strength</a></li>
+            <li><a href="#october7" class="nav-link">October 7, 2023</a></li>
+            <li><a href="#hamas-tactics" class="nav-link">The Tragedy of Hamas</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            
+            <li class="nav-category">Resources</li>
+            <li><a href="#resources" class="nav-link">Trusted Sources</a></li>
+        </ul>
+    </nav>
+
+    <header class="masthead">
+        <div class="masthead-date">A Resource for Understanding</div>
+        <h1 class="masthead-title">The Israel Chronicle</h1>
+        <p class="masthead-subtitle">Facts • History • Contributions • Hope</p>
+    </header>
+
+    <section class="hero" id="hero">
+        <h2 class="hero-headline">Building Bridges Through Knowledge and Understanding</h2>
+        <p class="hero-deck">Exploring the rich history, vibrant culture, and global contributions of the Jewish people and the State of Israel</p>
+    </section>
+
+    <div class="section-header" id="history">
+        <span class="section-label">Historical Connection</span>
+    </div>
+
+    <main class="articles">
+        <article class="article featured" id="ancient-history">
+            <div class="article-inner">
+                <span class="article-category">Ancient History</span>
+                <h3 class="article-headline">3,000 Years of Jewish Connection to the Land of Israel</h3>
+                <p class="article-summary">Archaeological discoveries continue to reveal the deep roots of Jewish civilization in Israel. From the City of David excavations to the Dead Sea Scrolls, physical evidence confirms millennia of continuous Jewish presence, culture, and religious practice in the land.</p>
+                <a href="https://www.jewishvirtuallibrary.org/history-and-overview-of-israel" target="_blank" rel="noopener" class="article-link">
+                    Explore the History
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article" id="archaeology">
+            <div class="article-inner">
+                <span class="article-category">Archaeology</span>
+                <h3 class="article-headline">UNESCO & The Western Wall: Affirming Historical Ties</h3>
+                <p class="article-summary">The Western Wall (Kotel) has been the holiest site in Judaism for centuries, the last remnant of the Second Temple destroyed in 70 CE. Archaeological findings in Jerusalem consistently validate the historical Jewish presence described in ancient texts.</p>
+                <a href="https://www.britannica.com/topic/Western-Wall" target="_blank" rel="noopener" class="article-link">
+                    Read More at Britannica
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article" id="zionism">
+            <div class="article-inner">
+                <span class="article-category">Modern History</span>
+                <h3 class="article-headline">Understanding Zionism: A Movement for Self-Determination</h3>
+                <p class="article-summary">Zionism emerged in the late 19th century as a movement advocating for Jewish self-determination in their ancestral homeland. Following centuries of persecution culminating in the Holocaust, it represented the aspiration for safety, dignity, and national renewal.</p>
+                <a href="https://www.britannica.com/topic/Zionism" target="_blank" rel="noopener" class="article-link">
+                    Learn About the Movement
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <div class="quote-block">
+        <p class="quote-text">"Peace is not merely the absence of war but the presence of justice, of law, of order — in short, of government."</p>
+        <p class="quote-attribution">— Albert Einstein, Nobel Laureate</p>
+    </div>
+
+    <div class="section-header" id="innovation">
+        <span class="section-label">Innovation & Contributions</span>
+    </div>
+
+    <section class="articles">
+        <article class="article featured" id="startup-nation">
+            <div class="article-inner">
+                <span class="article-category">Global Impact</span>
+                <h3 class="article-headline">"Startup Nation": Israeli Innovation Changing the World</h3>
+                <p class="article-summary">From USB flash drives to Waze navigation, drip irrigation to Iron Dome defense, Israel has become a global leader in technology, agriculture, medicine, and cybersecurity. With more NASDAQ-listed companies than any country except the US and China, Israeli innovation saves lives worldwide.</p>
+                <a href="https://nocamels.com/" target="_blank" rel="noopener" class="article-link">
+                    Discover Israeli Innovation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article" id="medicine">
+            <div class="article-inner">
+                <span class="article-category">Medicine</span>
+                <h3 class="article-headline">Israeli Medical Breakthroughs: From ReWalk to Cancer Research</h3>
+                <p class="article-summary">Israeli researchers pioneered the first effective treatment for multiple sclerosis (Copaxone), developed robotic exoskeletons helping paralyzed people walk, and continue leading cancer immunotherapy research. Israeli humanitarian medical teams respond to disasters worldwide.</p>
+                <a href="https://www.israel21c.org/topic/health/" target="_blank" rel="noopener" class="article-link">
+                    Health Innovations
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article" id="environment">
+            <div class="article-inner">
+                <span class="article-category">Environment</span>
+                <h3 class="article-headline">Making the Desert Bloom: Water Technology Leadership</h3>
+                <p class="article-summary">Israel turned water scarcity into opportunity, developing drip irrigation, desalination technology, and wastewater recycling that now helps farmers across Africa, Asia, and the Americas. Over 85% of Israel's wastewater is recycled — the highest rate in the world.</p>
+                <a href="https://www.britannica.com/technology/drip-irrigation" target="_blank" rel="noopener" class="article-link">
+                    Water Innovation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+    </section>
+
+    <section class="stats" id="stats">
+        <div class="stat">
+            <div class="stat-number">1947</div>
+            <div class="stat-label">UN Partition Accepted</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Arab Armies Invaded</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">22%</div>
+            <div class="stat-label">of Nobel Prizes</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">2M+</div>
+            <div class="stat-label">Arab Citizens</div>
+        </div>
+    </section>
+
+    <div class="section-header" id="coexistence">
+        <span class="section-label">Coexistence & Society</span>
+    </div>
+
+    <section class="articles">
+        <article class="article" id="democracy">
+            <div class="article-inner">
+                <span class="article-category">Democracy</span>
+                <h3 class="article-headline">Israel's Diverse Democracy: Arabs in Parliament, Courts & Military</h3>
+                <p class="article-summary">Arab citizens make up about 20% of Israel's population, serving as Supreme Court justices, members of Knesset, IDF officers, doctors, and professors. Israel remains the only country in the Middle East with full legal protections for LGBTQ+ citizens and freedom of religion.</p>
+                <a href="https://www.cfr.org/backgrounder/what-know-about-arab-citizens-israel" target="_blank" rel="noopener" class="article-link">
+                    Read CFR Analysis
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article" id="peace">
+            <div class="article-inner">
+                <span class="article-category">Peace Efforts</span>
+                <h3 class="article-headline">The Abraham Accords: A New Era of Regional Peace</h3>
+                <p class="article-summary">The 2020 Abraham Accords normalized relations between Israel and the UAE, Bahrain, Morocco, and Sudan — building on earlier peace treaties with Egypt (1979) and Jordan (1994). These agreements foster economic cooperation, tourism, and people-to-people connections.</p>
+                <a href="https://www.state.gov/the-abraham-accords/" target="_blank" rel="noopener" class="article-link">
+                    U.S. State Department
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article" id="humanitarian">
+            <div class="article-inner">
+                <span class="article-category">Humanitarian</span>
+                <h3 class="article-headline">First Responders: Israeli Aid From Haiti to Ukraine</h3>
+                <p class="article-summary">Israel consistently sends humanitarian missions worldwide. From establishing field hospitals after the Haiti earthquake to providing medical care for Syrian refugees and sending supplies to Ukraine, Israel punches above its weight in global humanitarian response.</p>
+                <a href="https://www.gov.il/en/departments/israel_agency_for_international_development_cooperation_mashav" target="_blank" rel="noopener" class="article-link">
+                    MASHAV Aid Agency
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+    </section>
+
+    <div class="section-header">
+        <span class="section-label">1947: A Tale of Two Responses</span>
+    </div>
+
+    <section class="articles">
+        <article class="article featured">
+            <div class="article-inner">
+                <span class="article-category">UN Resolution 181</span>
+                <h3 class="article-headline">November 29, 1947: The UN Votes to Partition Palestine</h3>
+                <p class="article-summary">The United Nations General Assembly voted 33-13 to create both a Jewish state and an Arab state in the territory of the British Mandate. Jews danced in the streets of Tel Aviv and Jerusalem, accepting their smaller portion of land for the sake of peace. The Arab Higher Committee and Arab League rejected the plan outright, refusing to accept any Jewish state of any size.</p>
+                <a href="https://www.britannica.com/topic/United-Nations-Resolution-181" target="_blank" rel="noopener" class="article-link">
+                    Read at Britannica
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="article-inner">
+                <span class="article-category">Declaration of Independence</span>
+                <h3 class="article-headline">May 14, 1948: Israel Declares Independence — Five Armies Invade</h3>
+                <p class="article-summary">Hours after Israel declared independence, five Arab armies (Egypt, Syria, Jordan, Lebanon, and Iraq) invaded with stated intentions to destroy the new state. Arab League Secretary-General Azzam Pasha declared it would be "a war of annihilation." The tiny, outgunned nation survived against overwhelming odds.</p>
+                <a href="https://history.state.gov/milestones/1945-1952/arab-israeli-war" target="_blank" rel="noopener" class="article-link">
+                    U.S. State Dept. History
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="article-inner">
+                <span class="article-category">Pattern of Rejection</span>
+                <h3 class="article-headline">A History of Rejected Peace: 1947, 1967, 2000, 2008...</h3>
+                <p class="article-summary">From the 1947 partition to Camp David (2000) to Olmert's offer (2008), Israel has repeatedly offered land for peace. Even PA President Mahmoud Abbas admitted in 2011 that the Arab rejection of the 1947 partition was "a mistake." Yet the pattern continues: Israel proposes, Palestinian leadership refuses, and violence follows.</p>
+                <a href="https://www.jewishvirtuallibrary.org/background-and-overview-of-2000-camp-david-summit" target="_blank" rel="noopener" class="article-link">
+                    Camp David Analysis
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="article-inner">
+                <span class="article-category">Ongoing Terror</span>
+                <h3 class="article-headline">Hamas Charter: "Israel Will Exist Until Islam Obliterates It"</h3>
+                <p class="article-summary">Hamas's 1988 founding charter explicitly calls for Israel's destruction through jihad, cites the antisemitic forgery "Protocols of the Elders of Zion," and includes the hadith calling for Muslims to kill Jews. Even the 2017 "revised" charter refuses to recognize Israel's right to exist. This is the organization that governs Gaza.</p>
+                <a href="https://www.cfr.org/backgrounder/what-hamas" target="_blank" rel="noopener" class="article-link">
+                    Council on Foreign Relations
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+    </section>
+
+    <div class="quote-block" style="background: linear-gradient(135deg, #1A2E4C 0%, #2E5C9A 100%);">
+        <p class="quote-text">"If the Arabs put down their weapons today, there would be no more violence. If the Jews put down their weapons today, there would be no more Israel."</p>
+        <p class="quote-attribution">— Benjamin Netanyahu</p>
+    </div>
+
+    <div class="section-header">
+        <span class="section-label">Understanding "Palestine"</span>
+    </div>
+
+    <section class="articles">
+        <article class="article featured">
+            <div class="article-inner">
+                <span class="article-category">Historical Origins</span>
+                <h3 class="article-headline">The Name "Palestine": A Roman Punishment for Jewish Rebellion</h3>
+                <p class="article-summary">After crushing the Jewish Bar Kokhba revolt in 135 CE, Emperor Hadrian renamed the province of Judea to "Syria Palaestina" — a name derived from the Philistines, the Jews' ancient enemy — specifically to sever the Jewish connection to their homeland. Scholars widely agree this was punitive "de-Judaization" of the land.</p>
+                <a href="https://www.worldhistory.org/palestine/" target="_blank" rel="noopener" class="article-link">
+                    World History Encyclopedia
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="article-inner">
+                <span class="article-category">Modern Identity</span>
+                <h3 class="article-headline">Palestinian Nationalism: A 20th Century Development</h3>
+                <p class="article-summary">Historian Rashid Khalidi's foundational work confirms Palestinian national identity emerged in the early 20th century. Before the British Mandate, Arabs in the region identified primarily as Ottomans, Arabs, or Syrians. The term "Palestinian" applied equally to Jews living there — hence the "Palestine Post" (now Jerusalem Post) and Palestine Symphony Orchestra.</p>
+                <a href="https://www.britannica.com/place/Palestine/Resurgence-of-Palestinian-identity" target="_blank" rel="noopener" class="article-link">
+                    Britannica on Identity
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="article-inner">
+                <span class="article-category">Historical Record</span>
+                <h3 class="article-headline">No Independent "Palestinian" State Ever Existed in History</h3>
+                <p class="article-summary">There has never been an independent nation called "Palestine" with its own government, currency, or borders. When Jordan held the West Bank (1948-1967) and Egypt held Gaza, neither established a Palestinian state. The PLO was founded in 1964 — three years before Israel held the West Bank or Gaza.</p>
+                <a href="https://www.jewishvirtuallibrary.org/origin-of-quot-palestine-quot" target="_blank" rel="noopener" class="article-link">
+                    Jewish Virtual Library
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="article-inner">
+                <span class="article-category">Contrast</span>
+                <h3 class="article-headline">3,000 Years of Continuous Jewish Connection vs. Modern Arab Claims</h3>
+                <p class="article-summary">While Palestinian identity emerged in the 20th century, Jewish connection to Israel spans millennia — documented in the Torah, Dead Sea Scrolls, Roman accounts, and continuous Jewish presence. Even during exile, Jews prayed toward Jerusalem three times daily and concluded Passover with "Next year in Jerusalem."</p>
+                <a href="https://www.britannica.com/place/Israel" target="_blank" rel="noopener" class="article-link">
+                    Israel at Britannica
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+    </section>
+
+    <div class="section-header">
+        <span class="section-label">Propaganda & The Modern Blood Libel</span>
+    </div>
+
+    <section class="articles">
+        <article class="article featured">
+            <div class="article-inner">
+                <span class="article-category">Historical Context</span>
+                <h3 class="article-headline">The Blood Libel: History's Most Deadly Antisemitic Lie</h3>
+                <p class="article-summary">For 900 years, Jews have been falsely accused of murdering Christian children for ritual purposes. This lie — the "blood libel" — led to massacres, pogroms, and the Holocaust. Despite being condemned by popes and disproven countless times, it persists. Today's accusations that "Israel targets children" echo this ancient hatred.</p>
+                <a href="https://encyclopedia.ushmm.org/content/en/article/blood-libel" target="_blank" rel="noopener" class="article-link">
+                    Holocaust Encyclopedia
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="article-inner">
+                <span class="article-category">Media Manipulation</span>
+                <h3 class="article-headline">"Pallywood": Staged Propaganda and Media Manipulation</h3>
+                <p class="article-summary">From the disputed al-Durrah incident (2000) to staged "evacuation" videos, there is a documented history of manipulated footage designed to demonize Israel. While genuine suffering exists on all sides, fabricated or misrepresented imagery undermines credibility and inflames hatred based on lies.</p>
+                <a href="https://honestreporting.com/tag/pallywood/" target="_blank" rel="noopener" class="article-link">
+                    HonestReporting Archive
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="article-inner">
+                <span class="article-category">ADL Research</span>
+                <h3 class="article-headline">Modern Blood Libels: From Medieval Europe to Today's Headlines</h3>
+                <p class="article-summary">The ADL documents how ancient blood libel accusations have evolved into modern claims: "Israel harvests organs," "Jews drink Palestinian blood," cartoon depictions of Jews eating children. These are not legitimate criticism of policy — they are the same dehumanizing lies that preceded every Jewish massacre in history.</p>
+                <a href="https://www.adl.org/resources/backgrounder/blood-libel-false-incendiary-claim-against-jews" target="_blank" rel="noopener" class="article-link">
+                    ADL Backgrounder
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="article-inner">
+                <span class="article-category">Critical Thinking</span>
+                <h3 class="article-headline">Verify Before You Share: Fighting Misinformation</h3>
+                <p class="article-summary">In the age of social media, unverified claims spread instantly. Old footage is recycled, context is stripped, and AI can generate fake images. Before sharing inflammatory content about any side, verify the source, check the date, and consider who benefits from your outrage. Truth is the first casualty of information warfare.</p>
+                <a href="https://www.britannica.com/topic/misinformation" target="_blank" rel="noopener" class="article-link">
+                    Understanding Misinformation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+    </section>
+
+    <div class="section-header" id="perspective">
+        <span class="section-label">Perspective: By the Numbers</span>
+    </div>
+
+    <section class="comparison-section">
+        <div class="comparison-intro">
+            <h3 class="comparison-headline">A Tiny Nation, A Singular Focus of Hostility</h3>
+            <p class="comparison-deck">Understanding the extraordinary disproportion between Israel's size, its contributions to humanity, and the hatred directed against it.</p>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="comparison-card">
+                <div class="comparison-label">World Population</div>
+                <div class="comparison-stat-row">
+                    <div class="comparison-item">
+                        <span class="comparison-number">2.4B</span>
+                        <span class="comparison-desc">Christians (31%)</span>
+                        <div class="comparison-bar" style="width: 100%; background: #7C9CBF;"></div>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-number">2.0B</span>
+                        <span class="comparison-desc">Muslims (25%)</span>
+                        <div class="comparison-bar" style="width: 83%; background: #5A7FA3;"></div>
+                    </div>
+                    <div class="comparison-item highlight">
+                        <span class="comparison-number">16M</span>
+                        <span class="comparison-desc">Jews (0.2%)</span>
+                        <div class="comparison-bar" style="width: 2%; min-width: 4px; background: var(--gold);"></div>
+                    </div>
+                </div>
+                <p class="comparison-note">The entire world Jewish population could fit in metropolitan Cairo or Shanghai — with room to spare.</p>
+            </div>
+
+            <div class="comparison-card">
+                <div class="comparison-label">Geographic Reality</div>
+                <div class="geo-comparison">
+                    <div class="geo-item">
+                        <span class="geo-number">22</span>
+                        <span class="geo-desc">Arab League nations</span>
+                    </div>
+                    <div class="geo-item">
+                        <span class="geo-number">13.1M km²</span>
+                        <span class="geo-desc">Arab League total area</span>
+                    </div>
+                    <div class="geo-item highlight">
+                        <span class="geo-number">1</span>
+                        <span class="geo-desc">Jewish state</span>
+                    </div>
+                    <div class="geo-item highlight">
+                        <span class="geo-number">22,000 km²</span>
+                        <span class="geo-desc">Israel's size (0.17% of Arab lands)</span>
+                    </div>
+                </div>
+                <p class="comparison-note">Israel is roughly the size of New Jersey. The Arab world spans an area larger than the continental United States.</p>
+            </div>
+
+            <div class="comparison-card">
+                <div class="comparison-label">Contributions vs. Population</div>
+                <div class="achievement-grid">
+                    <div class="achievement-item">
+                        <span class="achievement-stat">0.2%</span>
+                        <span class="achievement-label">of world population</span>
+                    </div>
+                    <div class="achievement-item gold">
+                        <span class="achievement-stat">22%</span>
+                        <span class="achievement-label">of Nobel Prizes</span>
+                    </div>
+                    <div class="achievement-item gold">
+                        <span class="achievement-stat">30%</span>
+                        <span class="achievement-label">of Ivy League faculty</span>
+                    </div>
+                    <div class="achievement-item gold">
+                        <span class="achievement-stat">50%+</span>
+                        <span class="achievement-label">of world chess champions</span>
+                    </div>
+                </div>
+                <p class="comparison-note">A contribution to human knowledge and progress wildly disproportionate to population size.</p>
+            </div>
+
+            <div class="comparison-card dark">
+                <div class="comparison-label">The Disproportion of Hatred</div>
+                <div class="hatred-stats">
+                    <div class="hatred-item">
+                        <span class="hatred-number">50%+</span>
+                        <span class="hatred-desc">of UN Human Rights Council resolutions condemn Israel — more than all other countries combined</span>
+                    </div>
+                    <div class="hatred-item">
+                        <span class="hatred-number">~500</span>
+                        <span class="hatred-desc">UN General Assembly resolutions against Israel since 1948 (vs. ~100 for all other nations)</span>
+                    </div>
+                    <div class="hatred-item">
+                        <span class="hatred-number">2,000+</span>
+                        <span class="hatred-desc">years of persecution, expulsion, and genocide culminating in the Holocaust</span>
+                    </div>
+                </div>
+                <p class="comparison-note">The world's smallest major faith, in one of the world's smallest nations, receives the world's most disproportionate condemnation.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-header" id="strength">
+        <span class="section-label">Peace Through Strength</span>
+    </div>
+
+    <section class="strength-section">
+        <div class="strength-intro">
+            <h3 class="strength-headline">Israel Seeks Peace — But Will Defend Its People</h3>
+            <p class="strength-deck">A nation that has extended its hand in peace to every neighbor, while maintaining the resolve to protect its citizens against those who seek its destruction.</p>
+        </div>
+
+        <div class="strength-grid">
+            <article class="strength-card">
+                <div class="strength-icon">🕊️</div>
+                <h4>Peace Offered</h4>
+                <p>Israel has signed peace treaties with Egypt (1979), Jordan (1994), and the Abraham Accords nations (2020). It has offered statehood to Palestinians multiple times — in 2000, 2001, and 2008 — each time met with rejection or violence.</p>
+            </article>
+
+            <article class="strength-card">
+                <div class="strength-icon">🛡️</div>
+                <h4>Defense Required</h4>
+                <p>Attacked on the day of its birth in 1948, Israel has survived multiple wars of annihilation. It developed Iron Dome to protect civilians from 50,000+ rockets, and maintains the IDF not for conquest, but survival.</p>
+            </article>
+
+            <article class="strength-card">
+                <div class="strength-icon">⚖️</div>
+                <h4>Moral Warfare</h4>
+                <p>The IDF is one of the few militaries that drops leaflets, makes phone calls, and uses "roof knocking" to warn civilians before strikes. It investigates alleged misconduct. No army facing terrorism does more to minimize civilian harm.</p>
+            </article>
+
+            <article class="strength-card">
+                <div class="strength-icon">🔒</div>
+                <h4>Unwavering Resolve</h4>
+                <p>"Never again" is not a slogan — it is policy. After millennia of persecution with no homeland to protect them, the Jewish people will never again rely on the goodwill of others for their survival. Israel is their guarantee.</p>
+            </article>
+        </div>
+
+        <div class="strength-quote">
+            <blockquote>"If the Arabs put down their weapons today, there would be no more violence. If the Jews put down their weapons today, there would be no more Israel."</blockquote>
+            <cite>— Often attributed to Golda Meir</cite>
+        </div>
+    </section>
+
+    <div class="section-header" id="october7">
+        <span class="section-label">October 7, 2023</span>
+    </div>
+
+    <section class="october7-section">
+        <div class="october7-intro">
+            <h3 class="october7-headline">The Deadliest Day for Jews Since the Holocaust</h3>
+            <p class="october7-deck">A planned massacre designed to kill, torture, rape, and kidnap as many civilians as possible — documented by Hamas's own cameras.</p>
+        </div>
+
+        <div class="october7-stats">
+            <div class="october7-stat">
+                <span class="october7-number">1,200</span>
+                <span class="october7-label">Murdered in a single day</span>
+            </div>
+            <div class="october7-stat">
+                <span class="october7-number">251</span>
+                <span class="october7-label">Taken hostage into Gaza</span>
+            </div>
+            <div class="october7-stat">
+                <span class="october7-number">364</span>
+                <span class="october7-label">Killed at a peace music festival</span>
+            </div>
+            <div class="october7-stat">
+                <span class="october7-number">73%</span>
+                <span class="october7-label">of victims were civilians</span>
+            </div>
+        </div>
+
+        <div class="atrocities-section">
+            <h4 class="atrocities-headline">What Happened — Documented by International Investigators</h4>
+            <p class="atrocities-intro">The following findings come from Human Rights Watch, the UK Parliament's Roberts Commission, UN investigators, and forensic evidence — not Israeli sources alone:</p>
+            
+            <div class="atrocities-grid">
+                <div class="atrocity-card">
+                    <span class="atrocity-icon">⚠️</span>
+                    <h5>Premeditated Mass Murder</h5>
+                    <p>Hamas spent years planning the attack, building mock Israeli communities for training. Fighters carried lists of civilians to kill or kidnap. This was not warfare — it was a coordinated massacre designed to maximize terror.</p>
+                </div>
+                <div class="atrocity-card">
+                    <span class="atrocity-icon">🏠</span>
+                    <h5>Families Executed in Homes</h5>
+                    <p>Entire families were murdered in their beds, in safe rooms, and while trying to flee. Homes were set on fire with people inside. Parents were killed in front of children. The youngest victim was a baby; the oldest was 92.</p>
+                </div>
+                <div class="atrocity-card">
+                    <span class="atrocity-icon">📱</span>
+                    <h5>Atrocities Filmed & Shared</h5>
+                    <p>Hamas terrorists filmed their crimes on GoPro cameras and victims' phones. They sent images of murdered family members to relatives via WhatsApp in real-time — an intentional act of psychological terror.</p>
+                </div>
+                <div class="atrocity-card">
+                    <span class="atrocity-icon">⚖️</span>
+                    <h5>War Crimes Confirmed</h5>
+                    <p>Human Rights Watch concluded Hamas committed "crimes against humanity" including murder, hostage-taking, torture, and sexual violence. The UN found "reasonable grounds" to believe rape occurred at multiple locations. The ICC issued arrest warrants for Hamas leaders.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="response-section">
+            <h4 class="response-headline">Israel's Response: In Historical Perspective</h4>
+            <p class="response-intro">Critics call Israel's response "disproportionate." History tells a different story.</p>
+            
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <span class="comparison-cell">Conflict</span>
+                    <span class="comparison-cell">Trigger</span>
+                    <span class="comparison-cell">Response</span>
+                    <span class="comparison-cell">Civilian Toll</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-cell"><strong>US after 9/11</strong></span>
+                    <span class="comparison-cell">~3,000 killed</span>
+                    <span class="comparison-cell">20-year wars in Afghanistan & Iraq</span>
+                    <span class="comparison-cell">400,000+ civilians killed</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-cell"><strong>Allies in WWII</strong></span>
+                    <span class="comparison-cell">Pearl Harbor, Blitz</span>
+                    <span class="comparison-cell">Total war against Axis powers</span>
+                    <span class="comparison-cell">600,000+ German civilians; 300,000+ Japanese civilians (bombing alone)</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-cell"><strong>Battle of Mosul</strong></span>
+                    <span class="comparison-cell">ISIS occupation</span>
+                    <span class="comparison-cell">US-backed Iraqi offensive</span>
+                    <span class="comparison-cell">~10,000 civilians; 4,000 ISIS = 2.5:1 ratio</span>
+                </div>
+                <div class="comparison-row highlight">
+                    <span class="comparison-cell"><strong>Israel in Gaza</strong></span>
+                    <span class="comparison-cell">1,200 massacred, 251 hostages</span>
+                    <span class="comparison-cell">Targeted campaign against Hamas</span>
+                    <span class="comparison-cell">~1.5:1 civilian-to-combatant ratio (historically low for urban warfare)</span>
+                </div>
+            </div>
+
+            <div class="response-facts">
+                <div class="response-fact">
+                    <span class="fact-highlight">90%</span>
+                    <p>is the typical civilian casualty rate in urban warfare according to the UN. Israel's rate of approximately 60% is historically low given the density of Gaza and Hamas's deliberate embedding among civilians.</p>
+                </div>
+                <div class="response-fact">
+                    <span class="fact-highlight">"New Standard"</span>
+                    <p>John Spencer, chair of urban warfare studies at West Point, concluded: "Israel has done more to prevent civilian harm than any military in the history of urban warfare."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="october7-quote">
+            <blockquote>"The October 7 atrocities should spur a global call to action for an end to all abuses against civilians in Israel and Palestine."</blockquote>
+            <cite>— Human Rights Watch, July 2024</cite>
+        </div>
+
+        <div class="october7-links">
+            <p class="links-label">Read the Full Documentation:</p>
+            <div class="links-row">
+                <a href="https://www.hrw.org/news/2024/07/17/october-7-crimes-against-humanity-war-crimes-hamas-led-groups" target="_blank" rel="noopener">Human Rights Watch Report</a>
+                <a href="https://www.gov.il/en/pages/swords-of-iron-oct7" target="_blank" rel="noopener">Israeli Government Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-header" id="hamas-tactics">
+        <span class="section-label">The Tragedy of Hamas</span>
+    </div>
+
+    <section class="hamas-section">
+        <div class="hamas-intro">
+            <h3 class="hamas-headline">A People Betrayed By Their Own Leaders</h3>
+            <p class="hamas-deck">How Hamas sacrifices Palestinian lives, diverts billions in aid, and chooses tunnels over prosperity.</p>
+        </div>
+
+        <div class="hamas-grid">
+            <article class="hamas-card dark">
+                <div class="hamas-card-header">
+                    <span class="hamas-icon">🛡️</span>
+                    <h4>Human Shields: A Documented Strategy</h4>
+                </div>
+                <div class="hamas-card-content">
+                    <p>Hamas deliberately embeds its military infrastructure among civilians. The evidence is overwhelming:</p>
+                    <ul class="hamas-list">
+                        <li><strong>Hospitals:</strong> Command centers and tunnel entrances found beneath Al-Shifa and other medical facilities</li>
+                        <li><strong>Schools:</strong> UN confirmed rockets stored in UNRWA schools on multiple occasions</li>
+                        <li><strong>Mosques:</strong> Used as headquarters, armories, and rocket launch sites</li>
+                        <li><strong>Residential buildings:</strong> Rocket launchers on rooftops, tunnel shafts in living rooms</li>
+                    </ul>
+                    <p class="hamas-quote">"We call upon our people to adopt this policy [human shields] in order to protect Palestinian homes."<br><span class="quote-attr">— Sami Abu Zuhri, Hamas spokesman, Al-Aqsa TV</span></p>
+                </div>
+            </article>
+
+            <article class="hamas-card dark">
+                <div class="hamas-card-header">
+                    <span class="hamas-icon">⚠️</span>
+                    <h4>Civilians as Pawns</h4>
+                </div>
+                <div class="hamas-card-content">
+                    <p>While Israel warns civilians before strikes — through phone calls, leaflets, and "roof knocking" — Hamas actively discourages evacuation:</p>
+                    <ul class="hamas-list">
+                        <li>Urges residents to ignore Israeli warnings and remain in strike zones</li>
+                        <li>Positions fighters and weapons in densely populated areas</li>
+                        <li>Stores ammunition in civilian homes without residents' knowledge</li>
+                        <li>Uses ambulances to transport fighters and weapons</li>
+                    </ul>
+                    <p>The goal: maximize Palestinian casualties to win the propaganda war. Every death is a headline. Every funeral is a recruitment tool.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="tunnel-section">
+            <h4 class="tunnel-headline">The "Gaza Metro": A Billion-Dollar Betrayal</h4>
+            <div class="tunnel-stats">
+                <div class="tunnel-stat">
+                    <span class="tunnel-number">350-500 km</span>
+                    <span class="tunnel-label">of tunnels — longer than the London Underground</span>
+                </div>
+                <div class="tunnel-stat">
+                    <span class="tunnel-number">$1+ Billion</span>
+                    <span class="tunnel-label">spent on tunnel construction over 15 years</span>
+                </div>
+                <div class="tunnel-stat">
+                    <span class="tunnel-number">~6,000 tons</span>
+                    <span class="tunnel-label">of concrete diverted from civilian construction</span>
+                </div>
+                <div class="tunnel-stat">
+                    <span class="tunnel-number">160+ children</span>
+                    <span class="tunnel-label">died building these tunnels (per 2012 reports)</span>
+                </div>
+            </div>
+            <p class="tunnel-note">These tunnels include air conditioning, electricity, phone lines, sleeping quarters, and kitchens for Hamas leaders — while Gazan civilians lack reliable power and clean water. The tunnels are designed for warfare and hiding hostages, not protecting civilians. Hamas built zero bomb shelters for its people.</p>
+        </div>
+
+        <div class="prosperity-section">
+            <h4 class="prosperity-headline">What Could Have Been: $40 Billion Squandered</h4>
+            <p class="prosperity-intro">Since 1994, Palestinians have received over <strong>$40 billion</strong> in international aid — one of the highest per-capita aid rates in the world. Where did it go?</p>
+            
+            <div class="prosperity-comparison">
+                <div class="prosperity-card could-have">
+                    <h5>What Gaza Could Have Built</h5>
+                    <ul>
+                        <li>World-class universities and research centers</li>
+                        <li>Modern hospitals serving the entire region</li>
+                        <li>Desalination plants solving the water crisis</li>
+                        <li>A Mediterranean tech hub rivaling Tel Aviv</li>
+                        <li>Tourism infrastructure on beautiful beaches</li>
+                        <li>Trade relationships with Israel and the world</li>
+                    </ul>
+                    <p class="prosperity-note">Singapore — a city-state with no natural resources, smaller than Gaza — built itself from poverty into one of the world's wealthiest nations in 50 years. Gaza had the money, the coastline, and willing partners. It lacked only leadership that chose life over death.</p>
+                </div>
+                <div class="prosperity-card actually-built">
+                    <h5>What Hamas Actually Built</h5>
+                    <ul>
+                        <li>500+ km of military tunnels</li>
+                        <li>Rocket factories and weapons storage</li>
+                        <li>Underground command centers</li>
+                        <li>"Pay-for-slay" rewards for terrorists</li>
+                        <li>Propaganda infrastructure</li>
+                        <li>Luxury bunkers for leadership</li>
+                    </ul>
+                    <p class="prosperity-note">Hamas leaders live in luxury in Qatar (estimated $4B personal wealth among top leaders) while their people suffer. They chose tunnels over schools, rockets over hospitals, and martyrdom over prosperity.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-box">
+            <p class="question-text">The question is not "Why does Israel blockade Gaza?"<br>The question is: <strong>"Why did Hamas choose war over prosperity?"</strong></p>
+        </div>
+    </section>
+
+    <div class="section-header" id="faq">
+        <span class="section-label">Understanding the Truth</span>
+    </div>
+
+    <section class="faq-section">
+        <div class="faq-intro">
+            <h3 class="faq-headline">Frequently Asked Questions</h3>
+            <p class="faq-deck">Calm answers to hard questions — because understanding matters more than shouting.</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">Why do Jews believe they have a claim to this land?</div>
+                <div class="faq-answer">
+                    The Jewish people originated in the Land of Israel over 3,000 years ago. Jerusalem was their capital under Kings David and Solomon. They built two Temples there. When exiled by Babylonians and Romans, they never stopped praying to return. Archaeological, historical, and genetic evidence confirms this unbroken connection — the longest documented tie of any people to any land.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is Israel a "colonial" project imposed by Europeans?</div>
+                <div class="faq-answer">
+                    No. Jews are indigenous to Israel, not colonizers from elsewhere. The majority of Israeli Jews descend from refugees expelled from Arab and Muslim countries (Mizrahi Jews), not Europe. Zionism was a movement of return to an ancestral homeland — similar to other indigenous peoples reclaiming their heritage. Unlike colonialism, there was no "mother country" seeking resources.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why is Israel singled out for criticism more than any other country?</div>
+                <div class="faq-answer">
+                    This is the question Israelis and Jews ask constantly. Countries with far worse human rights records — China, Iran, Syria, North Korea — receive a fraction of the UN condemnations Israel does. This obsessive focus on the world's only Jewish state, while ignoring far greater abuses, fits the historical pattern of antisemitism: holding Jews to standards applied to no one else.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does Israel want peace?</div>
+                <div class="faq-answer">
+                    Israel has repeatedly offered land for peace. It withdrew completely from Gaza in 2005, uprooting 8,000 of its own citizens. It offered the Palestinians a state in 2000 (Camp David), 2001 (Taba), and 2008 (Olmert Plan). Each offer was rejected. Israel made peace with every Arab nation willing to make peace. The obstacle has never been Israeli unwillingness.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is "From the River to the Sea"?</div>
+                <div class="faq-answer">
+                    This slogan calls for Palestinian control from the Jordan River to the Mediterranean Sea — the entire territory of Israel. There is no version of this that includes a Jewish state. For Jews who hear it, it is a call for their elimination from their homeland. It is not a peace slogan; it is a rejection of coexistence.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I support Palestinian rights and still support Israel's existence?</div>
+                <div class="faq-answer">
+                    Absolutely. Many Israelis, Jews, and supporters of Israel believe Palestinians deserve dignity, self-determination, and prosperity. What cannot be accepted is the demand that Jewish self-determination must end for Palestinian self-determination to begin. Two peoples can share this land — but only if both accept the other's right to exist.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why do Jews feel unsafe when they see anti-Israel protests?</div>
+                <div class="faq-answer">
+                    Because history has taught them that anti-Jewish violence follows anti-Jewish rhetoric. When protesters chant for "intifada" (violent uprising), tear down hostage posters, or attack visibly Jewish people, it confirms that the target is not just Israeli policy — it is Jews. Synagogues, Jewish schools, and Jewish businesses have been attacked worldwide during these protests.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">If Israel is so strong, why does it need defending?</div>
+                <div class="faq-answer">
+                    Military strength protects Israelis from rockets and terrorism. But Israel also faces a war of delegitimization — efforts to deny its right to exist through boycotts, UN resolutions, and campus activism. This "soft war" aims to isolate Israel until it cannot defend itself. History has shown that when Jews cannot defend themselves, catastrophe follows.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why is Gaza poor if it receives so much aid?</div>
+                <div class="faq-answer">
+                    Palestinians have received over $40 billion in international aid since 1994 — among the highest per-capita aid in the world. Hamas diverted billions into military infrastructure: over $1 billion on tunnels alone, plus rockets, weapons factories, and "pay-for-slay" rewards for terrorists. Meanwhile, Hamas leaders became billionaires living in Qatari luxury while their people suffer. Gaza's poverty is a policy choice by its rulers.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does Hamas really use human shields?</div>
+                <div class="faq-answer">
+                    Yes, and they've admitted it publicly. Hamas spokesman Sami Abu Zuhri called on Palestinians to form human shields on Al-Aqsa TV. The UN confirmed rockets in UNRWA schools. The IDF found command centers under hospitals, weapons in mosques, and tunnel entrances in homes. Hamas builds no bomb shelters for civilians — but built 500km of tunnels for fighters. The strategy is explicit: maximize civilian casualties to win global sympathy.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is Israel's response to October 7th proportionate?</div>
+                <div class="faq-answer">
+                    By any historical measure, yes. The US response to 9/11 (3,000 dead) resulted in 20-year wars killing over 400,000 civilians. The Allied response to WWII killed 600,000+ German civilians through bombing alone. Israel's civilian-to-combatant casualty ratio of approximately 1.5:1 is historically low for urban warfare — the UN estimates 90% civilian casualties is typical. West Point's leading urban warfare expert called Israel's efforts to minimize civilian harm "unprecedented in history."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="star-divider">✡</div>
+
+    <section class="resources" id="resources">
+        <h2 class="resources-title">Learn More From Trusted Sources</h2>
+        <div class="resources-grid">
+            <a href="https://www.britannica.com/place/Israel" target="_blank" rel="noopener" class="resource-link">Britannica</a>
+            <a href="https://www.cfr.org/israel" target="_blank" rel="noopener" class="resource-link">Council on Foreign Relations</a>
+            <a href="https://www.jewishvirtuallibrary.org/" target="_blank" rel="noopener" class="resource-link">Jewish Virtual Library</a>
+            <a href="https://avalon.law.yale.edu/subject_menus/mideast.asp" target="_blank" rel="noopener" class="resource-link">Yale Avalon Project</a>
+            <a href="https://www.israel21c.org/" target="_blank" rel="noopener" class="resource-link">Israel21c</a>
+            <a href="https://www.timesofisrael.com/" target="_blank" rel="noopener" class="resource-link">Times of Israel</a>
+            <a href="https://en.wikipedia.org/wiki/List_of_Jewish_Nobel_laureates" target="_blank" rel="noopener" class="resource-link">Jewish Nobel Laureates</a>
+            <a href="https://unwatch.org/un-israel-key-statistics/" target="_blank" rel="noopener" class="resource-link">UN Watch Statistics</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="peace-symbol">☮</div>
+        <p>Israel seeks peace. The Jewish people seek only to live in safety in their ancient homeland.</p>
+        <p>We extend our hand to all who choose coexistence over hatred.</p>
+        <p style="margin-top: 0.75rem; font-size: 0.7rem; opacity: 0.6;">Am Yisrael Chai • עם ישראל חי</p>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const navOverlay = document.getElementById('navOverlay');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', closeMenu);
+
+        // Close menu and smooth scroll when clicking nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                closeMenu();
+                
+                setTimeout(() => {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 300);
+            });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    </script>
+
+</body>
+</html>
